@@ -62,6 +62,7 @@ public class LaunchWebShortcut {
           cmdarray = new String[] {"open", url};
         } else if (osLower.indexOf( "nix") >=0 || osLower.indexOf( "nux") >=0) {
           cmdarray = new String[] {"xdg-open", url};
+        // We need a handler for Solaris and aix.  There are probably others as well.
         } else {
           throw new LaunchBrowserException("Operating system not recognized: " + os);
         }
