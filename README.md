@@ -13,6 +13,12 @@ Due to time constraints, I just used a custom-built launching algorithm
 (with some help from this blog entry:
 http://www.mkyong.com/java/open-browser-in-java-windows-or-linux/ )
 
+Installing
+----------
+Because I expect the installation instructions to change I have stored them in
+a wiki page located at
+https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing .
+
 Usage
 -----
 java -jar LaunchWebShortcut.jar "filename"
@@ -24,6 +30,7 @@ Websites
 --------
 Main Website: http://beckus.github.io/WebShortcutUtil/<br/>
 Source Code:  https://github.com/abcodeworks/LaunchWebShortcut-Java/<br/>
+Installation wiki: https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing
 
 Building
 --------
