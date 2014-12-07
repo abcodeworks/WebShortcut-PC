@@ -7,11 +7,16 @@ Java application which launches web shortcuts files.
 
 This application may not work with all operating systems.
 Due to differences in operating systems, it is difficult for
-Java to opena browser in a 100% reliable way.
+Java to open a browser in a 100% reliable way.
 I attempted to use the BrowserLauncher2 library, but had difficulties.
 Due to time constraints, I just used a custom-built launching algorithm
 (with some help from this blog entry:
 http://www.mkyong.com/java/open-browser-in-java-windows-or-linux/ )
+
+Notes
+-----
+- The launcher does not appear to work on Windows with files with unicode
+  characters (it gives a file not found exception).
 
 Installing
 ----------
