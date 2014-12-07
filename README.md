@@ -1,5 +1,5 @@
-ShareWebShortcut (Java Application)
-==============================
+LaunchWebShortcut (Java Application)
+====================================
 
 Summary
 -------
@@ -17,6 +17,11 @@ Notes
 -----
 - The launcher does not appear to work on Windows with files with unicode
   characters (it gives a file not found exception).
+- the build script for the WebShortcut Android app icons also creates
+  icons compatible for Windows and Linux.  Although they are not included
+  in this project, they perhaps should be moved to this project for
+  future use.  The script is in this folder:
+  https://github.com/abcodeworks/WebShortcut-Android/tree/master/WebShortcutApp/icon
 
 Installing
 ----------
