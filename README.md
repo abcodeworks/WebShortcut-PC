@@ -3,12 +3,27 @@ ShareWebShortcut (Java Application)
 
 Summary
 -------
-Java library for reading and writing web shortcut files
+Java application which launches web shortcuts files.
+
+This application may not work with all operating systems.
+Due to differences in operating systems, it is difficult for
+Java to opena browser in a 100% reliable way.
+I attempted to use the BrowserLauncher2 library, but had difficulties.
+Due to time constraints, I just used a custom-built launching algorithm
+(with some help from this blog entry:
+http://www.mkyong.com/java/open-browser-in-java-windows-or-linux/ )
+
+Usage
+-----
+java -jar LaunchWebShortcut.jar "filename"
+
+filename indicates the shortcut file to open.  The shortcut
+type will be determined by the file extension.
 
 Websites
 --------
 Main Website: http://beckus.github.io/WebShortcutUtil/<br/>
-Source Code:  https://github.com/abcodeworks/ShareWebShortcut-Java/<br/>
+Source Code:  https://github.com/abcodeworks/LaunchWebShortcut-Java/<br/>
 
 Building
 --------
@@ -16,9 +31,6 @@ Building
   mvn compile
 
 - To package:<br/>
-mvn install:install-file -Dfile=lib/BrowserLauncher2-1_3.jar -DgroupId=edu.stanford.ejalbert \
-    -DartifactId=BrowserLauncher2 -Dversion=1.3 -Dpackaging=jar
-
   mvn package<br/>
   The jar file is in the target/ folder
   
