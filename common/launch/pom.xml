@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.abcodeworks</groupId>
-  <artifactId>launchwebshortcut</artifactId>
-  <version>1.0.0</version>
+  <artifactId>webshortcutlaunch</artifactId>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
-  <name>LaunchWebShortcut</name>
-  <url>http://github.com/abcodeworks/LaunchWebShortcut-Java</url>
+  <name>WebShortcutLaunch</name>
+  <url>http://github.com/abcodeworks/WebShortcut-PC</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,10 +30,10 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.5</version>
         <configuration>
-          <finalName>LaunchWebShortcut</finalName>  
+          <finalName>WebShortcutLaunch</finalName>  
           <archive>
             <manifest>
-              <mainClass>com.abcodeworks.launchwebshortcut.LaunchWebShortcut</mainClass>
+              <mainClass>com.abcodeworks.webshortcutlaunch.WebShortcutLaunch</mainClass>
             </manifest>
           </archive>
         </configuration>

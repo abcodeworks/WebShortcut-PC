@@ -1,4 +1,4 @@
-LaunchWebShortcut (Java Application)
+Web Shortcut (Java Application)
 ====================================
 
 Summary
@@ -15,6 +15,7 @@ http://www.mkyong.com/java/open-browser-in-java-windows-or-linux/ )
 
 Notes
 -----
+- Currently there is only a standalone jar for launching shortcuts.
 - The launcher does not appear to work on Windows with files with unicode
   characters (it gives a file not found exception).
 - the build script for the WebShortcut Android app icons also creates
@@ -27,11 +28,11 @@ Installing
 ----------
 Because I expect the installation instructions to change I have stored them in
 a wiki page located at
-https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing .
+https://github.com/abcodeworks/WebShortcut-PC/wiki/Installing .
 
 Usage
 -----
-java -jar LaunchWebShortcut.jar "filename"
+java -jar WebShortcutLaunch.jar "filename"
 
 filename indicates the shortcut file to open.  The shortcut
 type will be determined by the file extension.
@@ -39,11 +40,13 @@ type will be determined by the file extension.
 Websites
 --------
 Main Website: http://beckus.github.io/WebShortcutUtil/<br/>
-Source Code:  https://github.com/abcodeworks/LaunchWebShortcut-Java/<br/>
-Installation wiki: https://github.com/abcodeworks/LaunchWebShortcut-Java/wiki/Installing
+Source Code:  https://github.com/abcodeworks/WebShortcut-PC/<br/>
+Installation wiki: https://github.com/abcodeworks/WebShortcut-PC/wiki/Installing
 
 Building
 --------
+The following can be run in the common/launch folder
+
 - To compile:<br/>
   mvn compile
 

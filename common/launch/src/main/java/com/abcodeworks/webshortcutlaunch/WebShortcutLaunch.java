@@ -19,7 +19,7 @@
  * under the License.
  */
 
-package com.abcodeworks.launchwebshortcut;
+package com.abcodeworks.webshortcutlaunch;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,17 +28,17 @@ import java.util.Properties;
 
 import com.abcodeworks.webshortcututil.read.ShortcutReadUtil;
 
-public class LaunchWebShortcut {
+public class WebShortcutLaunch {
 
     static void printUsage() {
         /* Print the version */
         Properties props = new Properties();
         try {
-            props.load(LaunchWebShortcut.class.getResourceAsStream("/META-INF/maven/com.abcodeworks/launchwebshortcut/pom.properties"));
+            props.load(WebShortcutLaunch.class.getResourceAsStream("/META-INF/maven/com.abcodeworks/webshortcutlaunch/pom.properties"));
             String version = props.getProperty("version");
-            System.out.println("LaunchWebShortcut Version " + version);
+            System.out.println("WebShortcutLaunch Version " + version);
             System.out.println("");
-            System.out.println("Usage: java -jar LaunchWebShortcut.jar \"filename\"");
+            System.out.println("Usage: java -jar WebShortcutLaunch.jar \"filename\"");
             System.out.println("filename indicates the shortcut file to open.  The shortcut");
             System.out.println("type will be determined by the file extension.");
         } catch (IOException e) {

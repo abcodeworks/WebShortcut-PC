@@ -19,7 +19,7 @@
  * under the License.
  */
 
-package com.abcodeworks.launchwebshortcut;
+package com.abcodeworks.webshortcutlaunch;
 
 public class LaunchBrowserException extends Exception {
     public LaunchBrowserException() {
