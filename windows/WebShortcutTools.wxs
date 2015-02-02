@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <Product Name="Web Shortcut Tools" Id="*" UpgradeCode="50a9c24a-8146-46e8-8fbb-b2f7b4cdf1a6"
+    Language="1033" Codepage="1252" Version="0.1.0" Manufacturer="ABCodeworks">
+
+    <Package Id="*" Keywords="Installer" Description="Web Shortcut Tools"
+      Manufacturer="ABCodeworks"
+      InstallerVersion="100" Languages="1033" Compressed="yes" SummaryCodepage="1252" />
+
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes"/>
+ 
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLDIR" Name="WebShortcutTools">
+          <Component Id="WebShortcut" Guid="a2b3d63e-be59-4a04-847e-c4c25efa9283">
+            <File Id="WebShortcutLaunch.exe" Source="build\WebShortcutLaunch.exe" DiskId="1" KeyPath="yes"/>
+			<ProgId Id="WebShortcut.DesktopShortcut" Description="Desktop Shortcut" Icon="WebShortcutLaunch.exe">
+			  <Extension Id="desktop" ContentType="application/x-desktop">
+			    <Verb Id="LaunchDesktop" Command="Open" TargetFile="WebShortcutLaunch.exe" Argument='"%1"' />
+              </Extension>
+			</ProgId>
+			<ProgId Id="WebShortcut.WeblocShortcut" Description="Webloc Shortcut" Icon="WebShortcutLaunch.exe">
+			  <Extension Id='webloc' ContentType="application/x-webloc">
+			    <Verb Id="LaunchWebloc" Command="Open" TargetFile="WebShortcutLaunch.exe" Argument='"%1"' />
+			  </Extension>
+            </ProgId>
+          </Component>
+	    </Directory>
+      </Directory>
+    </Directory>
+	
+	<!-- Based on: http://sanathshenoy.blogspot.com/2011/09/deploying-java-application-with-wix.html
+               and https://www.hass.de/content/wix-how-check-if-jre-installed-install-only -->
+	<Property Id="JAVA_CURRENT_VERSION">
+      <RegistrySearch Id="JRE_KEY" Root="HKLM" Key="SOFTWARE\JavaSoft\Java Runtime Environment" Name="CurrentVersion" Type="raw"  />
+    </Property>
+
+    <Condition Message="Required Java version is not found.  Please install JRE 1.6 or later."><![CDATA[(Installed OR JAVA_CURRENT_VERSION) AND JAVA_CURRENT_VERSION >= "1.6"]]></Condition>
+	
+    <Feature Id="Complete" Level="1">
+      <ComponentRef Id="WebShortcut" />
+    </Feature>
+	
+	<UIRef Id="WixUI_InstallDir" />
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+	<WixVariable Id="WixUILicenseRtf" Value="res\License.rtf" />
+  </Product>
+</Wix>

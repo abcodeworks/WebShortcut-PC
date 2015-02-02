@@ -42,3 +42,10 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+
+# Windows
+*.msi
+*.wixobj
+*.wixpd
+*.wixpdb
+windows/build
