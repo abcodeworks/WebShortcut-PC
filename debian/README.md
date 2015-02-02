@@ -19,13 +19,11 @@ Building the Installer
   sudo chown -R root:root package/usr
   sudo dpkg-deb --build package
   lintian package.deb
-  chmod 644 package.deb
+  sudo chmod 644 package.deb
+  sudo chown andre:andre package.deb
   mv package.deb webshortcuttools_0.1.1-1.deb
-
-  
-- To restore permissions:
-  sudo find package/usr -exec chmod 644 {} \;
   sudo chown -R andre:andre package/usr
+
 
 
 Notes
