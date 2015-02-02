@@ -26,6 +26,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import javax.swing.JOptionPane;
+
+import java.io.StringWriter;
+import java.io.PrintWriter;
+
 import com.abcodeworks.webshortcututil.read.ShortcutReadUtil;
 
 public class WebShortcutLaunch {
@@ -81,16 +86,21 @@ public class WebShortcutLaunch {
             System.exit(-1);
         }
         
+        File shortcutFile = new File(args[0]);
         try {
-            File shortcutFile = new File(args[0]);
             String url = ShortcutReadUtil.readUrlString(shortcutFile);
             launchBrowser(url);
         } catch(FileNotFoundException fnfe) {
+            JOptionPane.showMessageDialog(null, "Shortcut file \"" + shortcutFile + "\" not found!");
             System.err.println("Shortcut file not found");
             System.exit(-2);
         } catch(Exception e) {
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            JOptionPane.showMessageDialog(null, "Error processing file \"" + shortcutFile + "\"!\n\nError:\n" + sw.toString());
             e.printStackTrace();
-            System.exit(-2);
+            System.exit(-3);
         }
         
         System.exit(0);
