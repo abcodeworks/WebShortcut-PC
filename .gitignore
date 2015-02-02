@@ -49,3 +49,9 @@ local.properties
 *.wixpd
 *.wixpdb
 windows/build
+
+# Debian
+*.deb
+
+# Maven
+dependency-reduced-pom.xml
