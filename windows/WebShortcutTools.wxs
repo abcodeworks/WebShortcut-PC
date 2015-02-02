@@ -36,7 +36,7 @@
       <RegistrySearch Id="JRE_KEY" Root="HKLM" Key="SOFTWARE\JavaSoft\Java Runtime Environment" Name="CurrentVersion" Type="raw"  />
     </Property>
 
-    <Condition Message="Required Java version is not found.  Please install JRE 1.6 or later."><![CDATA[(Installed OR JAVA_CURRENT_VERSION) AND JAVA_CURRENT_VERSION >= "1.6"]]></Condition>
+    <Condition Message="Required Java version not found.  Please install JRE 1.6 or later."><![CDATA[(Installed OR JAVA_CURRENT_VERSION) AND JAVA_CURRENT_VERSION >= "1.6"]]></Condition>
 	
     <Feature Id="Complete" Level="1">
       <ComponentRef Id="WebShortcut" />

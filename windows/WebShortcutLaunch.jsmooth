@@ -17,7 +17,7 @@
 <skeletonName>Windowed Wrapper</skeletonName>
 <skeletonProperties>
 <key>Message</key>
-<value>Required Java version is not found.  Please install JRE 1.6 or later.  Do you want to download it?</value>
+<value>Required Java version not found.  Please install JRE 1.6 or later.  Do you want to download it?</value>
 </skeletonProperties>
 <skeletonProperties>
 <key>URL</key>
