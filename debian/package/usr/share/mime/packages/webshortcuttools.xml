@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/x-mswinurl">  
+    <comment>Internet shortcut</comment>
+    <glob pattern="*.url"/>
+  </mime-type>
+  <mime-type type="application/x-mswebsite">  
+    <comment>Website Shortcut</comment>
+    <glob pattern="*.website"/>
+  </mime-type>
+  <mime-type type="application/x-webloc">  
+    <comment>Webloc Shortcut</comment>
+    <glob pattern="*.webloc"/>
+  </mime-type>
+</mime-info>

@@ -1,0 +1,11 @@
+Package: webshortcuttools
+Version: 0.1.0-1
+Section: misc
+Priority: optional
+Architecture: all
+Installed-Size: 1000
+Depends: default-jre (>= 1.6) | openjdk-6-jre | openjdk-7-jre
+Maintainer: Andre Beckus <mikemail98-github@yahoo.com>
+Description: Web Shortcut Tools
+ Launches web/internet shortcut files created by Windows and Apple
+ operating systems.

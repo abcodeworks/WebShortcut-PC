@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Icon=
+Exec=java -jar /usr/share/java/WebShortcutLaunch.jar %U
+Comment=Launch Web Shortcuts
+MimeType=application/x-mswinurl;application/x-webloc;application/x-mswebsite;
+Name=Web Shortcut Launcher
+Name[en_US]=webshortcutlaunch
