@@ -11,6 +11,7 @@ Building the Installer
 ----------------------
 - Commands to build the installer (run in this sequence).  Note that the lintian command gives some
   warnings, but I am ignoring them:
+  Build WebShortcutLaunch.jar and put it into a folder "package/usr/share/java" folder.
   cd debian
   rm -R package/DEBIAN/control~
   sudo find package/usr -type d -exec chmod 755 {} \;
@@ -18,7 +19,11 @@ Building the Installer
   sudo chown -R root:root package/usr
   sudo dpkg-deb --build package
   lintian package.deb
-  mv package.deb webshortcuttools_0.1.0-1.deb
+  mv package.deb webshortcuttools_0.1.1-1.deb
+  
+- To restore permissions:
+  sudo find package/usr -exec chmod 755 {} \;
+  sudo chown -R andre:andre package/usr
 
 
 Notes
