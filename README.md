@@ -28,7 +28,7 @@ Installing
 ----------
 Because I expect the installation instructions to change I have stored them in
 a wiki page located at
-https://github.com/abcodeworks/WebShortcut-PC/wiki/Installing .
+https://github.com/abcodeworks/WebShortcut-PC/wiki .
 
 Usage
 -----
@@ -41,7 +41,7 @@ Websites
 --------
 Main Website: http://beckus.github.io/WebShortcutUtil/<br/>
 Source Code:  https://github.com/abcodeworks/WebShortcut-PC/<br/>
-Installation wiki: https://github.com/abcodeworks/WebShortcut-PC/wiki/Installing
+Installation wiki: https://github.com/abcodeworks/WebShortcut-PC/wiki
 
 Building
 --------
